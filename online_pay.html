@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            color: #27ae60;
+            font-size: 32px;
+            margin: 10px 0;
+        }
+        .payment-icons {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .payment-icons img {
+            width: 120px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        .payment-icons img:hover {
+            transform: scale(1.1);
+        }
+        .important-points {
+            margin-top: 20px;
+            padding-left: 20px;
+            border-left: 3px solid #27ae60;
+        }
+        .important-points p {
+            margin-bottom: 10px;
+            font-style: italic;
+            color: #555;
+            font-weight: bold;
+        }
+        .important-points ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        .important-points ul li {
+            margin-bottom: 5px;
+        }
+        .reference-code {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .reference-code input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 200px;
+            box-sizing: border-box;
+            margin-right: 10px;
+        }
+        .reference-code button {
+            padding: 10px 20px;
+            background-color: #27ae60;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .reference-code button:hover {
+            background-color: #219150;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Payment Methods</h1>
+        </header>
+
+        <div class="payment-icons">
+            <!-- Google Pay -->
+            <a href="https://pay.google.com/">
+                <img src="C:\Users\Divya\Pictures\googlepay.jpg" alt="Google Pay">
+            </a>
+            <!-- PhonePe -->
+            <a href="https://www.phonepe.com/">
+                <img src="C:\Users\Divya\Pictures\phonepay.jpg" alt="PhonePe">
+            </a>
+            <!-- Paytm -->
+            <a href="https://paytm.com/">
+                <img src="C:\Users\Divya\Pictures\paytm.jpg" alt="Paytm">
+            </a>
+        </div>
+
+        <div class="important-points">
+            <p>Important Points:</p>
+            <ul>
+                <li>Copy the number: +91 9876543210</li>
+                <li>Select the name as SCANMART</li>
+                <li>Pay the total amount</li>
+            </ul>
+        </div>
+
+        <div class="reference-code">
+            <p>Reference Code:</p>
+            <input type="text" id="reference-code-input" placeholder="Enter reference code">
+            <button onclick="checkReferenceCode()">Check</button>
+        </div>
+    </div>
+
+    <script>
+        function checkReferenceCode() {
+            var referenceCode = document.getElementById('reference-code-input').value;
+            if (referenceCode === 'RF2311DSV') {
+                window.open('receipt.html', '_blank');
+            } else {
+                alert('Reference code does not match. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>

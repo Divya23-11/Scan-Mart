@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .receipt-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .receipt-table th, .receipt-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .receipt-table th {
+            background-color: #f2f2f2;
+        }
+        .receipt-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .receipt-table tr:hover {
+            background-color: #f2f2f2;
+        }
+        .receipt-total {
+            text-align: right;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Scan Mart</h1>
+        <h2>Receipt</h2>
+        <table class="receipt-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Product 1</td>
+                    <td>₹100.00</td>
+                </tr>
+                <tr>
+                    <td>Product 2</td>
+                    <td>₹150.00</td>
+                </tr>
+                <tr>
+                    <td>Product 3</td>
+                    <td>₹50.00</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td class="receipt-total">₹300.00</td>
+                </tr>
+            </tfoot>
+        </table>
+        <p>Thank you for shopping at Scan Mart!</p>
+    </div>
+</body>
+</html>
